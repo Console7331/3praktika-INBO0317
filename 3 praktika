@@ -1,0 +1,39 @@
+#include <iostream>
+#include <cstring>
+
+using namespase std;
+class book {
+	private:
+		string bookName;
+		string authorName;
+		int pagesAmount;
+	public:
+	void setBookName () {
+		cout << "Enter book name: " << endl;
+		getline (cin, bookName );
+
+	}
+	void setAuthorName () {
+		cout << "Enter author name: " << endl;
+		getline (cin, authorName );
+	}
+	void setPagesAmount () {
+		cout << "Enter pages amount: " << endl;
+		cin >> pagesAmount;
+	}
+	void getBookInfo () {
+		cout << "Book info: " << endl;
+		cout << "Author name: " << authorName << endl;
+		cout << "Book name: " << bookName << endl;
+		cout << pagesAmount << " pages" << endl;
+	} 
+};
+int main () {
+	system ("color F0");
+	book bookFirst;
+	bookFirst.setBookName();
+	bookFirst.setAuthorName();
+	bookFirst.setPagesAmount();
+	bookFirst.getBookInfo();
+	return 0;
+}
